@@ -1,0 +1,2209 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>GitHub Enterprise Repository Policies: Complete Guide — Hub 5</title>
+  <meta name="description" content="GitHub Enterprise Repository Policies: Complete Guide — every guide in the GitHub Enterprise hub #5, organized from fundamentals to advanced practice. Part of our GitHub Enterprise coverage on DevToolkit Hub.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <link rel="canonical" href="https://devguidebase.github.io/github-enterprise/github-enterprise-repository-policies/">
+  <meta name="author" content="Firozur Rahman">
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../../assets/kutukdev/images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/apple-touch-icon.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+:root {--ghost-accent-color: #e60073;}
+.capital { text-transform: capitalize; }
+.site-header__logo-image { height: 35px; width: auto; display: block; }
+.table-of-contents { background:#f7f8fa; border:1px solid rgba(0,0,0,.08); border-radius:9px; padding:1rem 1.25rem; margin:1.5rem 0; }
+.table-of-contents ol { margin:.25rem 0 .25rem 1.1rem; padding:0; }
+.table-of-contents .toc-title { font-weight:700; margin:0 0 .4rem 0; }
+.pagination { display:flex; gap:.5rem; justify-content:center; align-items:center; margin:2rem 0; flex-wrap:wrap; }
+.pagination a, .pagination span { padding:.4rem .8rem; border-radius:6px; border:1px solid rgba(0,0,0,.12); font-size:.9rem; }
+.pagination .current { background:var(--ghost-accent-color,#e60073); color:#fff; border-color:transparent; }
+.ad-300 { margin:1.25rem 0; }
+</style>
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GitHub Enterprise Repository Policies: Complete Guide — Hub 5">
+  <meta property="og:description" content="GitHub Enterprise Repository Policies: Complete Guide — every guide in the GitHub Enterprise hub #5, organized from fundamentals to advanced practice. Part of our GitHub Enterprise coverage on DevToolkit Hub.">
+  <meta property="og:url" content="https://devguidebase.github.io/github-enterprise/github-enterprise-repository-policies/">
+  <meta property="og:site_name" content="DevToolkit Hub">
+  <meta property="og:image" content="https://devguidebase.github.io/assets/kutukdev/images/og-default.png">
+  <meta property="og:image:alt" content="GitHub Enterprise Repository Policies: Complete Guide — Hub 5">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GitHub Enterprise Repository Policies: Complete Guide — Hub 5">
+  <meta name="twitter:description" content="GitHub Enterprise Repository Policies: Complete Guide — every guide in the GitHub Enterprise hub #5, organized from fundamentals to advanced practice. Part of our GitHub Enterprise coverage on DevToolkit Hub.">
+  <meta name="twitter:image" content="https://devguidebase.github.io/assets/kutukdev/images/og-default.png">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="Firozur Rahman">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="6 minutes">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "CollectionPage", "name": "GitHub Enterprise Repository Policies: Complete Guide — Hub 5", "url": "https://devguidebase.github.io/github-enterprise/github-enterprise-repository-policies/", "description": "GitHub Enterprise Repository Policies: Complete Guide — every guide in the GitHub Enterprise hub #5, organized from fundamentals to advanced practice. Part of our GitHub Enterprise coverage on DevToolkit Hub.", "isPartOf": {"@id": "https://devguidebase.github.io/#website"}, "inLanguage": "en", "publisher": {"@id": "https://devguidebase.github.io/#organization"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://devguidebase.github.io/"}, {"@type": "ListItem", "position": 2, "name": "GitHub Enterprise Repository Policies: Complete Guide", "item": "https://devguidebase.github.io/github-enterprise/github-enterprise-repository-policies/"}]}
+  </script>
+
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+      <span class="site-header__bg"></span>
+      <div class="site-header__container container">
+        <button class="site-header__hamburger" data-site-action-trigger="navigation"
+                aria-label="Open Menu" aria-expanded="false"
+                aria-controls="site-actions-navigation">
+          <span></span>
+        </button>
+        <a href="../../" rel="home" class="site-header__logo">
+          <img class="site-header__logo-image" src="../../assets/kutukdev/images/logo.png"
+               alt="DevToolkit Hub" width="128" height="128">
+          <span class="site-header__logo-text">DevToolkit Hub</span>
+        </a>
+      </div>
+      <div class="site-actions">
+        <span class="site-actions__backdrop" data-close-site-actions></span>
+        <span class="site-actions__bg"></span>
+        <div class="site-actions__container container">
+          <div id="site-actions-navigation" class="site-actions__navigation">
+            <nav class="nav-secondary">
+              <ul class="nav-secondary__menu">
+<li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/azure-devops/">
+          <span class="nav-secondary__menu-title">Azure DevOps</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github/">
+          <span class="nav-secondary__menu-title">GitHub</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-actions/">
+          <span class="nav-secondary__menu-title">GitHub Actions</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-advanced-security/">
+          <span class="nav-secondary__menu-title">GitHub Advanced Security</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-copilot/">
+          <span class="nav-secondary__menu-title">GitHub Copilot</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-enterprise/">
+          <span class="nav-secondary__menu-title">GitHub Enterprise</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/microsoft-git/">
+          <span class="nav-secondary__menu-title">Microsoft Git</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/nuget/">
+          <span class="nav-secondary__menu-title">NuGet</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/powershell/">
+          <span class="nav-secondary__menu-title">PowerShell</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/windows-sdk/">
+          <span class="nav-secondary__menu-title">Windows SDK</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/windows-terminal/">
+          <span class="nav-secondary__menu-title">Windows Terminal</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../hubs/">
+          <span class="nav-secondary__menu-title">All Hubs</span>
+        </a>
+      </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+<center>
+<script>
+  atOptions = {
+    'key' : 'a69e62c73b1ebe4abb7eed658870a8b6',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/a69e62c73b1ebe4abb7eed658870a8b6"></script>
+</center>
+      <header class="article-header section" data-section="first">
+        <div class="article-header__content">
+          <h1 class="article-header__title">GitHub Enterprise Repository Policies: Complete Guide</h1>
+          <p class="article-header__excerpt">GitHub Enterprise Repository Policies: Complete Guide — every guide in the GitHub Enterprise hub #5, organized from fundamentals to advanced practice. Part of our GitHub Enterprise coverage on DevToolkit Hub.</p>
+        </div>
+      </header>
+      <section class="section" data-section="first">
+        <div class="container">
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for new projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow starting from an empty repository, before any habits harden, GitHub Enterprise: How to repository policies for new projects deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for existing projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow without disrupting in-flight work or breaking active branches, GitHub Enterprise: How to repository policies for existing projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for large teams</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow across dozens of contributors with different backgrounds and access levels, GitHub Enterprise: How to repository policies for large teams deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for enterprise environments</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow with governance, compliance and change-control in the loop, GitHub Enterprise: How to repository policies for enterprise environments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for Windows developers</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow on Windows workstations and Windows-based build agents, GitHub Enterprise: How to repository policies for Windows developers deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for cross-platform development</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to repository policies for cross-platform development is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise consistently</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: How to repository policies for production deployments, and this guide walks it end to end. Because the work sits inside GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20how%20to%20repository%20policies%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to repository policies for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-repository-policies-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to repository policies for security reviews</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to repository policies for security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise under</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20configure%20repository%20policies%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Configure repository policies for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Configure repository policies for new projects</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Configure repository policies for new projects is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          </div>
+<center class="ad-300">
+<script>
+  atOptions = {
+    'key' : '5d21d6998db677a26d7522ee3d48c165',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/5d21d6998db677a26d7522ee3d48c165"></script>
+</center>
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20configure%20repository%20policies%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Configure repository policies for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Configure repository policies for small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Configure repository policies for small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20configure%20repository%20policies%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Configure repository policies for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Configure repository policies for Windows developers</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Configure repository policies for Windows developers constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20configure%20repository%20policies%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Configure repository policies for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-configure-repository-policies-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Configure repository policies for cross-platform development</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Configure repository policies for cross-platform development is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When new projects</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Troubleshoot repository policies When new projects is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When large teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Troubleshoot repository policies When large teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Troubleshoot repository policies When small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When enterprise environments</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Troubleshoot repository policies When enterprise environments is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When Windows developers</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Troubleshoot repository policies When Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When cross-platform development</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow consistently across Windows, macOS and Linux machines, GitHub Enterprise: How to Troubleshoot repository policies When cross-platform development deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20troubleshoot%20repository%20policies%20when%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Troubleshoot repository policies When security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-troubleshoot-repository-policies-when-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Troubleshoot repository policies When security reviews</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Troubleshoot repository policies When security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20best%20practices%20for%20repository%20policies%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Best Practices for repository policies in new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Best Practices for repository policies in new projects</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Best Practices for repository policies in new projects is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20best%20practices%20for%20repository%20policies%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Best Practices for repository policies in large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Best Practices for repository policies in large teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Best Practices for repository policies in large teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20best%20practices%20for%20repository%20policies%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Best Practices for repository policies in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Best Practices for repository policies in small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Best Practices for repository policies in small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20best%20practices%20for%20repository%20policies%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Best Practices for repository policies in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Best Practices for repository policies in Windows developers</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Best Practices for repository policies in Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20best%20practices%20for%20repository%20policies%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Best Practices for repository policies in CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-best-practices-for-repository-policies-in-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Best Practices for repository policies in CI/CD pipelines</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: Best Practices for repository policies in CI/CD pipelines, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in new projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Common repository policies Mistakes in new projects constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Common repository policies Mistakes in existing projects constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in large teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Common repository policies Mistakes in large teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise across</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Common repository policies Mistakes in small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise with</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in enterprise environments</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Common repository policies Mistakes in enterprise environments is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise with</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in Windows developers</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Common repository policies Mistakes in Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise on</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in cross-platform development</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow consistently across Windows, macOS and Linux machines, GitHub Enterprise: Common repository policies Mistakes in cross-platform development deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in CI/CD pipelines</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Common repository policies Mistakes in CI/CD pipelines is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in production deployments</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Common repository policies Mistakes in production deployments constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20common%20repository%20policies%20mistakes%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Common repository policies Mistakes in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-common-repository-policies-mistakes-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Common repository policies Mistakes in security reviews</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow under formal security review, where every decision needs evidence, GitHub Enterprise: Common repository policies Mistakes in security reviews deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:00:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for new projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow starting from an empty repository, before any habits harden, GitHub Enterprise: Repository Policies Examples for new projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Examples for existing projects constantly, and the honest answer is that it depends less on talent and more on process. When GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for large teams</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow across dozens of contributors with different backgrounds and access levels, GitHub Enterprise: Repository Policies Examples for large teams deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for small teams</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow with minimum overhead, because nobody owns the build full-time, GitHub Enterprise: Repository Policies Examples for small teams deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for enterprise environments</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Examples for enterprise environments constantly, and the honest answer is that it depends less on talent and more on process. When GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for Windows developers</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow on Windows workstations and Windows-based build agents, GitHub Enterprise: Repository Policies Examples for Windows developers deserves a deliberate procedure rather than</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for cross-platform development</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: Repository Policies Examples for cross-platform development, and this guide walks it end to end. Because the work sits inside GitHub Enterprise,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20examples%20of%20repository%20policies%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Examples for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-examples-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Examples for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Examples for CI/CD pipelines constantly, and the honest answer is that it depends less on talent and more on process. When GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20automate%20repository%20policies%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Automate repository policies for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Automate repository policies for new projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: How to Automate repository policies for new projects, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20automate%20repository%20policies%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Automate repository policies for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Automate repository policies for Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: How to Automate repository policies for Windows developers, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20automate%20repository%20policies%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Automate repository policies for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Automate repository policies for cross-platform development</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Automate repository policies for cross-platform development constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20automate%20repository%20policies%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Automate repository policies for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Automate repository policies for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: How to Automate repository policies for CI/CD pipelines, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20automate%20repository%20policies%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Automate repository policies for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Automate repository policies for production deployments</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow in production-critical environments where mistakes page humans, GitHub Enterprise: How to Automate repository policies for production deployments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20automate%20repository%20policies%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Automate repository policies for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-automate-repository-policies-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Automate repository policies for security reviews</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Automate repository policies for security reviews constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in new projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Secure repository policies in new projects constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in large teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Secure repository policies in large teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Secure repository policies in small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in enterprise environments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: How to Secure repository policies in enterprise environments, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in Windows developers</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Secure repository policies in Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in cross-platform development</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Secure repository policies in cross-platform development constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20secure%20repository%20policies%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Secure repository policies in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-secure-repository-policies-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Secure repository policies in security reviews</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Secure repository policies in security reviews constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-optimize-repository-policies-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20optimize%20repository%20policies%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Optimize repository policies for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-optimize-repository-policies-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Optimize repository policies for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Optimize repository policies for large teams constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for new projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Options Compared for new projects constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for existing projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow without disrupting in-flight work or breaking active branches, GitHub Enterprise: Repository Policies Options Compared for existing projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Options Compared for large teams constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for small teams</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Options Compared for small teams constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for enterprise environments</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow with governance, compliance and change-control in the loop, GitHub Enterprise: Repository Policies Options Compared for enterprise environments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for Windows developers</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Options Compared for Windows developers constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for cross-platform development</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Repository Policies Options Compared for cross-platform development is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise consistently</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow inside automated pipelines where nobody can fix things interactively, GitHub Enterprise: Repository Policies Options Compared for CI/CD pipelines deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for production deployments</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Repository Policies Options Compared for production deployments is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise in</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20compare%20repository%20policies%20options%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Options Compared for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-options-compared-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Options Compared for security reviews</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Repository Policies Options Compared for security reviews constantly, and the honest answer is that it depends less on talent and more on process. When GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:15:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-migrate-repository-policies-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20migrate%20repository%20policies%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Migrate repository policies for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-migrate-repository-policies-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Migrate repository policies for new projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Migrate repository policies for new projects constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-migrate-repository-policies-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20migrate%20repository%20policies%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Migrate repository policies for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-migrate-repository-policies-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Migrate repository policies for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Migrate repository policies for large teams constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-monitor-repository-policies-during-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20monitor%20repository%20policies%20during%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Monitor repository policies During large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-monitor-repository-policies-during-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Monitor repository policies During large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: How to Monitor repository policies During large teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-monitor-repository-policies-during-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20monitor%20repository%20policies%20during%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Monitor repository policies During security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-monitor-repository-policies-during-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Monitor repository policies During security reviews</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Monitor repository policies During security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During new projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow starting from an empty repository, before any habits harden, GitHub Enterprise: How to Fix repository policies Errors During new projects deserves</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During existing projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow without disrupting in-flight work or breaking active branches, GitHub Enterprise: How to Fix repository policies Errors During existing projects deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During large teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Fix repository policies Errors During large teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Fix repository policies Errors During small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During enterprise environments</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Fix repository policies Errors During enterprise environments is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During Windows developers</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Fix repository policies Errors During Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During cross-platform development</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow consistently across Windows, macOS and Linux machines, GitHub Enterprise: How to Fix repository policies Errors During cross-platform development deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During CI/CD pipelines</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: How to Fix repository policies Errors During CI/CD pipelines is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During production deployments</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: How to Fix repository policies Errors During production deployments constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20fix%20repository%20policies%20errors%20during%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: How to Fix repository policies Errors During security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-how-to-fix-repository-policies-errors-during-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: How to Fix repository policies Errors During security reviews</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow under formal security review, where every decision needs evidence, GitHub Enterprise: How to Fix repository policies Errors During security reviews deserves</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:30:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for new projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow starting from an empty repository, before any habits harden, GitHub Enterprise: A Beginner’s Guide to repository policies for new projects deserves</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: A Beginner’s Guide to repository policies for existing projects constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for small teams</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow with minimum overhead, because nobody owns the build full-time, GitHub Enterprise: A Beginner’s Guide to repository policies for small teams deserves</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for Windows developers</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow on Windows workstations and Windows-based build agents, GitHub Enterprise: A Beginner’s Guide to repository policies for Windows developers deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: A Beginner’s Guide to repository policies for CI/CD pipelines is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for production deployments</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow in production-critical environments where mistakes page humans, GitHub Enterprise: A Beginner’s Guide to repository policies for production deployments deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20beginner%20guide%20to%20repository%20policies%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Beginner’s Guide to repository policies for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-beginners-guide-to-repository-policies-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Beginner’s Guide to repository policies for security reviews</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow under formal security review, where every decision needs evidence, GitHub Enterprise: A Beginner’s Guide to repository policies for security reviews deserves</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20advanced%20techniques%20for%20repository%20policies%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Advanced repository policies Techniques for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Advanced repository policies Techniques for existing projects</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow without disrupting in-flight work or breaking active branches, GitHub Enterprise: Advanced repository policies Techniques for existing projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20advanced%20techniques%20for%20repository%20policies%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Advanced repository policies Techniques for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Advanced repository policies Techniques for small teams</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow with minimum overhead, because nobody owns the build full-time, GitHub Enterprise: Advanced repository policies Techniques for small teams deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20advanced%20techniques%20for%20repository%20policies%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Advanced repository policies Techniques for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Advanced repository policies Techniques for enterprise environments</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow with governance, compliance and change-control in the loop, GitHub Enterprise: Advanced repository policies Techniques for enterprise environments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20advanced%20techniques%20for%20repository%20policies%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Advanced repository policies Techniques for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Advanced repository policies Techniques for cross-platform development</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Advanced repository policies Techniques for cross-platform development is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise consistently</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20advanced%20techniques%20for%20repository%20policies%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Advanced repository policies Techniques for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Advanced repository policies Techniques for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow inside automated pipelines where nobody can fix things interactively, GitHub Enterprise: Advanced repository policies Techniques for CI/CD pipelines deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20advanced%20techniques%20for%20repository%20policies%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Advanced repository policies Techniques for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-advanced-repository-policies-techniques-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Advanced repository policies Techniques for security reviews</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Advanced repository policies Techniques for security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise under</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-repository-policies-performance-tips-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20performance%20tips%20for%20repository%20policies%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Repository Policies Performance Tips for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-repository-policies-performance-tips-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Repository Policies Performance Tips for large teams</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow across dozens of contributors with different backgrounds and access levels, GitHub Enterprise: Repository Policies Performance Tips for large teams deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20workflow%20for%20repository%20policies%20across%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Repository Policies Workflow for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Repository Policies Workflow for existing projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: A Repository Policies Workflow for existing projects, and this guide walks it end to end. Because the work sits inside GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20workflow%20for%20repository%20policies%20across%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Repository Policies Workflow for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Repository Policies Workflow for large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: A Repository Policies Workflow for large teams, and this guide walks it end to end. Because the work sits inside GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20workflow%20for%20repository%20policies%20across%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Repository Policies Workflow for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Repository Policies Workflow for Windows developers</h2>
+                <p class="post-card__excerpt">If GitHub Enterprise is part of your daily workflow on Windows workstations and Windows-based build agents, GitHub Enterprise: A Repository Policies Workflow for Windows developers deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20workflow%20for%20repository%20policies%20across%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Repository Policies Workflow for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Repository Policies Workflow for production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: A Repository Policies Workflow for production deployments, and this guide walks it end to end. Because the work sits inside GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20workflow%20for%20repository%20policies%20across%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: A Repository Policies Workflow for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-a-repository-policies-workflow-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: A Repository Policies Workflow for security reviews</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: A Repository Policies Workflow for security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub Enterprise under</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20questions%20to%20ask%20about%20repository%20policies%20before%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Questions to Ask About repository policies Before existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Questions to Ask About repository policies Before existing projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: Questions to Ask About repository policies Before existing projects, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20questions%20to%20ask%20about%20repository%20policies%20before%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Questions to Ask About repository policies Before large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Questions to Ask About repository policies Before large teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Questions to Ask About repository policies Before large teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20questions%20to%20ask%20about%20repository%20policies%20before%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Questions to Ask About repository policies Before small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Questions to Ask About repository policies Before small teams</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Questions to Ask About repository policies Before small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20questions%20to%20ask%20about%20repository%20policies%20before%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Questions to Ask About repository policies Before Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Questions to Ask About repository policies Before Windows developers</h2>
+                <p class="post-card__excerpt">GitHub Enterprise: Questions to Ask About repository policies Before Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with GitHub</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-cross-platform-develop.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20questions%20to%20ask%20about%20repository%20policies%20before%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Questions to Ask About repository policies Before cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-cross-platform-develop.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Questions to Ask About repository policies Before cross-platform development</h2>
+                <p class="post-card__excerpt">Teams ask about GitHub Enterprise: Questions to Ask About repository policies Before cross-platform development constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=GitHub%20Enterprise%20questions%20to%20ask%20about%20repository%20policies%20before%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="GitHub Enterprise: Questions to Ask About repository policies Before security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../github-enterprise/github-enterprise-questions-to-ask-about-repository-policies-before-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">GitHub Enterprise: Questions to Ask About repository policies Before security reviews</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach GitHub Enterprise: Questions to Ask About repository policies Before security reviews, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/github-enterprise/" class="post-card__meta post-card__meta-tag-primary" rel="tag">GitHub Enterprise</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-29T05:45:00+06:00">October 29, 2026</time>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer" class="site-footer" data-theme="highlight">
+      <div class="site-footer__content" data-canvas-grid="container">
+        <nav class="nav-secondary">
+          <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">Dmca</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+          </ul>
+        </nav>
+        <p class="site-footer__copyright">
+          &copy; 2026 DevToolkit Hub
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
+</body>
+</html>
