@@ -20,10 +20,8 @@
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <link rel="stylesheet" href="https://devguidebase.github.io/assets/kutukdev/css/fonts.css">
   <style>
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
 :root {--ghost-accent-color: #e60073;}
 .capital { text-transform: capitalize; }
 .site-header__logo-image { height: 35px; width: auto; display: block; }
@@ -57,7 +55,7 @@
 
 </head>
 <body class="page-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
     <header id="site-header" class="site-header">
       <span class="site-header__bg"></span>
@@ -148,20 +146,16 @@
       </div>
     </header>
     <main id="main" class="site-main">
-      <header class="page-header section" data-section="first">
-        <div class="container">
-          <h1 class="page-header__title">DMCA Notice</h1>
-        </div>
-      </header>
-      <section class="section">
-        <div class="container">
-          <div class="article-content">
+      <article class="article post featured">
+        <div class="article-main section" data-canvas-grid="content">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+            <h1>DMCA Notice</h1>
             <p>DevToolkit Hub respects the intellectual property rights of others and expects users and contributors to do the same. In accordance with the Digital Millennium Copyright Act of 1998, we will respond expeditiously to claims of copyright infringement committed using our website that are reported to the designated copyright agent identified below.</p>
             <p>If you are a copyright owner, or authorized on behalf of one, please report alleged infringements by submitting a notice that includes: identification of the copyrighted work claimed to have been infringed; the exact URL of the material on this site; your contact information including address, telephone, and email; a statement of good-faith belief that the use is unauthorized; a statement, under penalty of perjury, that the information in your notice is accurate and that you are the owner or authorized to act on the owner's behalf; and your physical or electronic signature.</p>
             <p>Notices may be sent to the contact address listed on our Contact page. We may remove or disable access to the allegedly infringing material and will notify the affected party where appropriate. Repeat infringers may have access restricted. All technical content on DevToolkit Hub is original editorial work; product names and trademarks mentioned in articles remain the property of their respective owners.</p>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer id="site-footer" class="site-footer" data-theme="highlight">
       <div class="site-footer__content" data-canvas-grid="container">

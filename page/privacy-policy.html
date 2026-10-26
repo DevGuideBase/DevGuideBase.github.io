@@ -20,10 +20,8 @@
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <link rel="stylesheet" href="https://devguidebase.github.io/assets/kutukdev/css/fonts.css">
   <style>
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
 :root {--ghost-accent-color: #e60073;}
 .capital { text-transform: capitalize; }
 .site-header__logo-image { height: 35px; width: auto; display: block; }
@@ -57,7 +55,7 @@
 
 </head>
 <body class="page-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
     <header id="site-header" class="site-header">
       <span class="site-header__bg"></span>
@@ -148,20 +146,16 @@
       </div>
     </header>
     <main id="main" class="site-main">
-      <header class="page-header section" data-section="first">
-        <div class="container">
-          <h1 class="page-header__title">Privacy Policy</h1>
-        </div>
-      </header>
-      <section class="section">
-        <div class="container">
-          <div class="article-content">
+      <article class="article post featured">
+        <div class="article-main section" data-canvas-grid="content">
+          <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
+            <h1>Privacy Policy</h1>
             <p>DevToolkit Hub is a static website. We do not operate user accounts, and we do not collect personal information through this site beyond standard, anonymous web server logs that record page requests for security and performance purposes.</p>
             <p>This site loads article images from third-party image services and includes advertising scripts from third-party ad networks. Those parties may use cookies or similar technologies under their own privacy policies, which we encourage you to review. We do not control and are not responsible for third-party tracking technologies.</p>
             <p>You can control cookies through your browser settings at any time. Questions about privacy may be sent through our Contact page, and we will answer every substantive inquiry within two business days.</p>
           </div>
         </div>
-      </section>
+      </article>
     </main>
     <footer id="site-footer" class="site-footer" data-theme="highlight">
       <div class="site-footer__content" data-canvas-grid="container">

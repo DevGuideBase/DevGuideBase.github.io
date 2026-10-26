@@ -1,0 +1,16 @@
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:400;font-display:swap;src:url('../fonts/source-sans-pro-v21-latin-ext_latin-italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:600;font-display:swap;src:url('../fonts/source-sans-pro-v21-latin-ext_latin-600italic.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+    @font-face{font-family:'Source Sans Pro';font-style:italic;font-weight:700;font-display:swap;src:url('../fonts/source-sans-pro-v21-latin-ext_latin-700italic.woff2') format('woff2')}
+    :root {
+      --kutak--font-family--base:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--headings:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-family--elements:'Source Sans Pro',Helvetica,sans-serif;
+      --kutak--font-weight--base:400;
+      --kutak--font-weight--base-bold:700;
+      --kutak--font-weight--headings:700;
+      --kutak--font-weight--headings-small:600;
+      --kutak--font-weight--elements:600;
+    }
