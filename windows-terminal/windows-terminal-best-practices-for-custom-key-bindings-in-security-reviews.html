@@ -20,10 +20,8 @@
   <link rel="preload" as="style" href="../assets/kutukdev/css/style.css">
   <link rel="stylesheet" href="../assets/kutukdev/css/style.css">
   <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <link rel="stylesheet" href="https://devguidebase.github.io/assets/kutukdev/css/fonts.css">
   <style>
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
 :root {--ghost-accent-color: #e60073;}
 .capital { text-transform: capitalize; }
 .site-header__logo-image { height: 35px; width: auto; display: block; }
@@ -72,7 +70,7 @@
 
 </head>
 <body class="home-template">
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link visually-hidden-focusable" href="#main">Skip to content</a>
   <div class="site" id="site">
     <header id="site-header" class="site-header">
       <span class="site-header__bg"></span>
@@ -178,8 +176,7 @@
 </center>
       <header class="article-header section" data-layout-grid="custom"
               data-theme="highlight" data-section="first" data-has-featured-image="true">
-        <div class="article-header__inner">
-          <figure id="img-top" class="article-header__figure">
+        <figure id="img-top" class="article-header__figure">
             <img class="article-header__image" width="1200" height="630"
                  src="https://tse1.mm.bing.net/th?q=Windows%20Terminal%20best%20practices%20for%20custom%20key%20bindings%20in%20security%20reviews&w=474&h=274&c=7"
                  srcset="https://tse1.mm.bing.net/th?q=Windows%20Terminal%20best%20practices%20for%20custom%20key%20bindings%20in%20security%20reviews&w=360&h=208&c=7 360w, https://tse1.mm.bing.net/th?q=Windows%20Terminal%20best%20practices%20for%20custom%20key%20bindings%20in%20security%20reviews&w=480&h=278&c=7 480w"
@@ -195,10 +192,8 @@
               <time class="article-header__meta article-header__meta--date" datetime="2026-11-01T01:00:00+06:00">November 1, 2026</time>
             </div>
           </div>
-        </div>
       </header>
       <div class="article-main section" data-canvas-grid="content">
-        <div class="container">
           <div class="article-content" data-canvas-grid="content" data-canvas-grid-self="full">
           <p><strong>Windows Terminal: Best Practices for custom key bindings in security reviews</strong></p>
           <p>If Windows Terminal is part of your daily workflow under formal security review, where every decision needs evidence, windows Terminal: Best Practices for custom key bindings in security reviews deserves a deliberate procedure rather than tribal knowledge. This article gives you that procedure, with the commands, checkpoints and judgement calls you need along the way.</p>
@@ -317,7 +312,6 @@
           <h3 id="what-is-the-fastest-way-to-verify-custom-key-bindi">What is the fastest way to verify custom key bindings worked?</h3>
           <p>Define the success signal before you start — a command that exits zero, a log line, or a passing check — then run it immediately after the change. If you cannot articulate that signal yet, that is the real blocker, not the custom key bindings mechanics.</p>
           </div>
-        </div>
       </div>
       <footer class="article-footer">
         <div class="related-posts section" data-canvas-grid="container" data-theme="highlight">
