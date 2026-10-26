@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>DevToolkit Hub</title>
+  <meta name="description" content="Developer tools &amp; programming guides. In-depth guides for Azure DevOps, GitHub, NuGet, PowerShell, Windows SDK and the modern Microsoft developer stack.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <link rel="canonical" href="https://devguidebase.github.io/">
+  <meta name="author" content="Firozur Rahman">
+  <link rel="preload" as="font" type="font/woff2" href="./assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="./assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="./assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="./assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="./assets/kutukdev/images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="./assets/kutukdev/images/icon96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/kutukdev/images/apple-touch-icon.png">
+  <meta name="msapplication-TileImage" content="./assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="./assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="./assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('./assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('./assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('./assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+:root {--ghost-accent-color: #e60073;}
+.capital { text-transform: capitalize; }
+.site-header__logo-image { height: 35px; width: auto; display: block; }
+.table-of-contents { background:#f7f8fa; border:1px solid rgba(0,0,0,.08); border-radius:9px; padding:1rem 1.25rem; margin:1.5rem 0; }
+.table-of-contents ol { margin:.25rem 0 .25rem 1.1rem; padding:0; }
+.table-of-contents .toc-title { font-weight:700; margin:0 0 .4rem 0; }
+.pagination { display:flex; gap:.5rem; justify-content:center; align-items:center; margin:2rem 0; flex-wrap:wrap; }
+.pagination a, .pagination span { padding:.4rem .8rem; border-radius:6px; border:1px solid rgba(0,0,0,.12); font-size:.9rem; }
+.pagination .current { background:var(--ghost-accent-color,#e60073); color:#fff; border-color:transparent; }
+.ad-300 { margin:1.25rem 0; }
+</style>
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DevToolkit Hub">
+  <meta property="og:description" content="Developer tools &amp; programming guides. In-depth guides for Azure DevOps, GitHub, NuGet, PowerShell, Windows SDK and the modern Microsoft developer stack.">
+  <meta property="og:url" content="https://devguidebase.github.io/">
+  <meta property="og:site_name" content="DevToolkit Hub">
+  <meta property="og:image" content="https://devguidebase.github.io/assets/kutukdev/images/og-default.png">
+  <meta property="og:image:alt" content="DevToolkit Hub">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevToolkit Hub">
+  <meta name="twitter:description" content="Developer tools &amp; programming guides. In-depth guides for Azure DevOps, GitHub, NuGet, PowerShell, Windows SDK and the modern Microsoft developer stack.">
+  <meta name="twitter:image" content="https://devguidebase.github.io/assets/kutukdev/images/og-default.png">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="Firozur Rahman">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="6 minutes">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://devguidebase.github.io/#organization", "name": "DevToolkit Hub", "url": "https://devguidebase.github.io/", "logo": {"@type": "ImageObject", "url": "https://devguidebase.github.io/assets/kutukdev/images/icon128.png"}}, {"@type": "WebSite", "@id": "https://devguidebase.github.io/#website", "url": "https://devguidebase.github.io/", "name": "DevToolkit Hub", "publisher": {"@id": "https://devguidebase.github.io/#organization"}, "inLanguage": "en"}]}
+  </script>
+
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+      <span class="site-header__bg"></span>
+      <div class="site-header__container container">
+        <button class="site-header__hamburger" data-site-action-trigger="navigation"
+                aria-label="Open Menu" aria-expanded="false"
+                aria-controls="site-actions-navigation">
+          <span></span>
+        </button>
+        <a href="./" rel="home" class="site-header__logo">
+          <img class="site-header__logo-image" src="./assets/kutukdev/images/logo.png"
+               alt="DevToolkit Hub" width="128" height="128">
+          <span class="site-header__logo-text">DevToolkit Hub</span>
+        </a>
+      </div>
+      <div class="site-actions">
+        <span class="site-actions__backdrop" data-close-site-actions></span>
+        <span class="site-actions__bg"></span>
+        <div class="site-actions__container container">
+          <div id="site-actions-navigation" class="site-actions__navigation">
+            <nav class="nav-secondary">
+              <ul class="nav-secondary__menu">
+<li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="./"><span class="nav-secondary__menu-title">Home</span></a></li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/azure-devops/">
+          <span class="nav-secondary__menu-title">Azure DevOps</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/github/">
+          <span class="nav-secondary__menu-title">GitHub</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/github-actions/">
+          <span class="nav-secondary__menu-title">GitHub Actions</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/github-advanced-security/">
+          <span class="nav-secondary__menu-title">GitHub Advanced Security</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/github-copilot/">
+          <span class="nav-secondary__menu-title">GitHub Copilot</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/github-enterprise/">
+          <span class="nav-secondary__menu-title">GitHub Enterprise</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/microsoft-git/">
+          <span class="nav-secondary__menu-title">Microsoft Git</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/nuget/">
+          <span class="nav-secondary__menu-title">NuGet</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/powershell/">
+          <span class="nav-secondary__menu-title">PowerShell</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/windows-sdk/">
+          <span class="nav-secondary__menu-title">Windows SDK</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./category/windows-terminal/">
+          <span class="nav-secondary__menu-title">Windows Terminal</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="./hubs/">
+          <span class="nav-secondary__menu-title">All Hubs</span>
+        </a>
+      </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+<center>
+<script>
+  atOptions = {
+    'key' : 'a69e62c73b1ebe4abb7eed658870a8b6',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/a69e62c73b1ebe4abb7eed658870a8b6"></script>
+</center>
+      <section class="section" data-section="first">
+        <div class="container">
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in security reviews</h2>
+                <p class="post-card__excerpt">NuGet: Common private feeds and authentication Mistakes in security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with NuGet under</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T22:58:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach NuGet: Common private feeds and authentication Mistakes in production deployments, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T21:56:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in CI/CD pipelines</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow inside automated pipelines where nobody can fix things interactively, NuGet: Common private feeds and authentication Mistakes in CI/CD pipelines deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T20:54:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in cross-platform development</h2>
+                <p class="post-card__excerpt">NuGet: Common private feeds and authentication Mistakes in cross-platform development is one of those jobs that looks small until you have to repeat it under pressure. Working with NuGet consistently</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T19:52:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in Windows developers</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow on Windows workstations and Windows-based build agents, NuGet: Common private feeds and authentication Mistakes in Windows developers deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T18:50:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in enterprise environments</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow with governance, compliance and change-control in the loop, NuGet: Common private feeds and authentication Mistakes in enterprise environments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T17:48:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in small teams</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow with minimum overhead, because nobody owns the build full-time, NuGet: Common private feeds and authentication Mistakes in small teams deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T16:46:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in large teams</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow across dozens of contributors with different backgrounds and access levels, NuGet: Common private feeds and authentication Mistakes in large teams deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T15:44:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in existing projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach NuGet: Common private feeds and authentication Mistakes in existing projects, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T14:42:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          </div>
+<center class="ad-300">
+<script>
+  atOptions = {
+    'key' : '5d21d6998db677a26d7522ee3d48c165',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/5d21d6998db677a26d7522ee3d48c165"></script>
+</center>
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20common%20private%20feeds%20and%20authentication%20mistakes%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Common private feeds and authentication Mistakes in new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-common-private-feeds-and-authentication-mistakes-in-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Common private feeds and authentication Mistakes in new projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach NuGet: Common private feeds and authentication Mistakes in new projects, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T13:40:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20best%20practices%20for%20private%20feeds%20and%20authentication%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Best Practices for private feeds and authentication in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Best Practices for private feeds and authentication in security reviews</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach NuGet: Best Practices for private feeds and authentication in security reviews, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T12:38:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20best%20practices%20for%20private%20feeds%20and%20authentication%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Best Practices for private feeds and authentication in production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Best Practices for private feeds and authentication in production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach NuGet: Best Practices for private feeds and authentication in production deployments, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T11:36:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20best%20practices%20for%20private%20feeds%20and%20authentication%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Best Practices for private feeds and authentication in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Best Practices for private feeds and authentication in cross-platform development</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach NuGet: Best Practices for private feeds and authentication in cross-platform development, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T09:33:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20best%20practices%20for%20private%20feeds%20and%20authentication%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Best Practices for private feeds and authentication in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Best Practices for private feeds and authentication in enterprise environments</h2>
+                <p class="post-card__excerpt">Teams ask about NuGet: Best Practices for private feeds and authentication in enterprise environments constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T07:29:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20best%20practices%20for%20private%20feeds%20and%20authentication%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Best Practices for private feeds and authentication in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Best Practices for private feeds and authentication in small teams</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow with minimum overhead, because nobody owns the build full-time, NuGet: Best Practices for private feeds and authentication in small teams deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T06:27:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20best%20practices%20for%20private%20feeds%20and%20authentication%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: Best Practices for private feeds and authentication in existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-best-practices-for-private-feeds-and-authentication-in-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: Best Practices for private feeds and authentication in existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about NuGet: Best Practices for private feeds and authentication in existing projects constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T04:23:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20troubleshoot%20private%20feeds%20and%20authentication%20when%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Troubleshoot private feeds and authentication When production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Troubleshoot private feeds and authentication When production deployments</h2>
+                <p class="post-card__excerpt">Teams ask about NuGet: How to Troubleshoot private feeds and authentication When production deployments constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T01:17:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20troubleshoot%20private%20feeds%20and%20authentication%20when%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Troubleshoot private feeds and authentication When CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Troubleshoot private feeds and authentication When CI/CD pipelines</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow inside automated pipelines where nobody can fix things interactively, NuGet: How to Troubleshoot private feeds and authentication When CI/CD pipelines deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-25T00:15:00+06:00">October 25, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20troubleshoot%20private%20feeds%20and%20authentication%20when%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Troubleshoot private feeds and authentication When Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Troubleshoot private feeds and authentication When Windows developers</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow on Windows workstations and Windows-based build agents, NuGet: How to Troubleshoot private feeds and authentication When Windows developers deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-24T22:11:00+06:00">October 24, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20troubleshoot%20private%20feeds%20and%20authentication%20when%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Troubleshoot private feeds and authentication When enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Troubleshoot private feeds and authentication When enterprise environments</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow with governance, compliance and change-control in the loop, NuGet: How to Troubleshoot private feeds and authentication When enterprise environments deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-24T21:09:00+06:00">October 24, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20troubleshoot%20private%20feeds%20and%20authentication%20when%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Troubleshoot private feeds and authentication When large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Troubleshoot private feeds and authentication When large teams</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow across dozens of contributors with different backgrounds and access levels, NuGet: How to Troubleshoot private feeds and authentication When large teams deserves</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-24T19:05:00+06:00">October 24, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20troubleshoot%20private%20feeds%20and%20authentication%20when%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Troubleshoot private feeds and authentication When existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-troubleshoot-private-feeds-and-authentication-when-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Troubleshoot private feeds and authentication When existing projects</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow without disrupting in-flight work or breaking active branches, NuGet: How to Troubleshoot private feeds and authentication When existing projects deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-24T18:03:00+06:00">October 24, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-configure-private-feeds-and-authentication-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20configure%20private%20feeds%20and%20authentication%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Configure private feeds and authentication for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-configure-private-feeds-and-authentication-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Configure private feeds and authentication for security reviews</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow under formal security review, where every decision needs evidence, NuGet: How to Configure private feeds and authentication for security reviews deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-24T15:59:00+06:00">October 24, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="./nuget/nuget-how-to-configure-private-feeds-and-authentication-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=NuGet%20configure%20private%20feeds%20and%20authentication%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="NuGet: How to Configure private feeds and authentication for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="./nuget/nuget-how-to-configure-private-feeds-and-authentication-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">NuGet: How to Configure private feeds and authentication for cross-platform development</h2>
+                <p class="post-card__excerpt">If NuGet is part of your daily workflow consistently across Windows, macOS and Linux machines, NuGet: How to Configure private feeds and authentication for cross-platform development deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="./category/nuget/" class="post-card__meta post-card__meta-tag-primary" rel="tag">NuGet</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-24T12:53:00+06:00">October 24, 2026</time>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer" class="site-footer" data-theme="highlight">
+      <div class="site-footer__content" data-canvas-grid="container">
+        <nav class="nav-secondary">
+          <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="./"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="./page/dmca.html"><span class="nav-secondary__menu-title">Dmca</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="./page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="./page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="./page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+          </ul>
+        </nav>
+        <p class="site-footer__copyright">
+          &copy; 2026 DevToolkit Hub
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="./assets/kutukdev/js/main.js"></script>
+</body>
+</html>
