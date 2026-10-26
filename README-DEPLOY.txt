@@ -1,4 +1,4 @@
-DevToolkit Hub - static site (22,106 articles, 165 hubs, 11 categories)
+DevGuideBase - static site (22,106 articles, 165 hubs, 11 categories)
 =======================================================================
 
 WHAT IS INSIDE
