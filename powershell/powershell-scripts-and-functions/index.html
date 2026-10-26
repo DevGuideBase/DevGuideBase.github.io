@@ -1,0 +1,2266 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-header-style="modern">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.replace('no-js','js');</script>
+  <title>PowerShell Scripts and Functions: Complete Guide — Hub 5</title>
+  <meta name="description" content="PowerShell Scripts and Functions: Complete Guide — every guide in the PowerShell hub #5, organized from fundamentals to advanced practice. Part of our PowerShell coverage on DevToolkit Hub.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+  <link rel="canonical" href="https://devguidebase.github.io/powershell/powershell-scripts-and-functions/">
+  <meta name="author" content="Firozur Rahman">
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2" crossorigin>
+  <link rel="icon" href="../../assets/kutukdev/images/favicon.ico" sizes="48x48" type="image/x-icon">
+  <link rel="icon" href="../../assets/kutukdev/images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="../../assets/kutukdev/images/icon96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="../../assets/kutukdev/images/apple-touch-icon.png">
+  <meta name="msapplication-TileImage" content="../../assets/kutukdev/images/icon128.png">
+  <link rel="preload" as="style" href="../../assets/kutukdev/css/style.css">
+  <link rel="stylesheet" href="../../assets/kutukdev/css/style.css">
+  <link rel="preconnect" href="https://tse1.mm.bing.net">
+  <style>
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-regular.woff2') format('woff2')}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-600.woff2') format('woff2')}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;font-display:swap;src:url('../../assets/kutukdev/fonts/source-sans-pro-v21-latin-ext_latin-700.woff2') format('woff2')}
+:root {--ghost-accent-color: #e60073;}
+.capital { text-transform: capitalize; }
+.site-header__logo-image { height: 35px; width: auto; display: block; }
+.table-of-contents { background:#f7f8fa; border:1px solid rgba(0,0,0,.08); border-radius:9px; padding:1rem 1.25rem; margin:1.5rem 0; }
+.table-of-contents ol { margin:.25rem 0 .25rem 1.1rem; padding:0; }
+.table-of-contents .toc-title { font-weight:700; margin:0 0 .4rem 0; }
+.pagination { display:flex; gap:.5rem; justify-content:center; align-items:center; margin:2rem 0; flex-wrap:wrap; }
+.pagination a, .pagination span { padding:.4rem .8rem; border-radius:6px; border:1px solid rgba(0,0,0,.12); font-size:.9rem; }
+.pagination .current { background:var(--ghost-accent-color,#e60073); color:#fff; border-color:transparent; }
+.ad-300 { margin:1.25rem 0; }
+</style>
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PowerShell Scripts and Functions: Complete Guide — Hub 5">
+  <meta property="og:description" content="PowerShell Scripts and Functions: Complete Guide — every guide in the PowerShell hub #5, organized from fundamentals to advanced practice. Part of our PowerShell coverage on DevToolkit Hub.">
+  <meta property="og:url" content="https://devguidebase.github.io/powershell/powershell-scripts-and-functions/">
+  <meta property="og:site_name" content="DevToolkit Hub">
+  <meta property="og:image" content="https://devguidebase.github.io/assets/kutukdev/images/og-default.png">
+  <meta property="og:image:alt" content="PowerShell Scripts and Functions: Complete Guide — Hub 5">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PowerShell Scripts and Functions: Complete Guide — Hub 5">
+  <meta name="twitter:description" content="PowerShell Scripts and Functions: Complete Guide — every guide in the PowerShell hub #5, organized from fundamentals to advanced practice. Part of our PowerShell coverage on DevToolkit Hub.">
+  <meta name="twitter:image" content="https://devguidebase.github.io/assets/kutukdev/images/og-default.png">
+  <meta name="twitter:label1" content="Written by">
+  <meta name="twitter:data1" content="Firozur Rahman">
+  <meta name="twitter:label2" content="Reading Time">
+  <meta name="twitter:data2" content="6 minutes">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "CollectionPage", "name": "PowerShell Scripts and Functions: Complete Guide — Hub 5", "url": "https://devguidebase.github.io/powershell/powershell-scripts-and-functions/", "description": "PowerShell Scripts and Functions: Complete Guide — every guide in the PowerShell hub #5, organized from fundamentals to advanced practice. Part of our PowerShell coverage on DevToolkit Hub.", "isPartOf": {"@id": "https://devguidebase.github.io/#website"}, "inLanguage": "en", "publisher": {"@id": "https://devguidebase.github.io/#organization"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://devguidebase.github.io/"}, {"@type": "ListItem", "position": 2, "name": "PowerShell Scripts and Functions: Complete Guide", "item": "https://devguidebase.github.io/powershell/powershell-scripts-and-functions/"}]}
+  </script>
+
+</head>
+<body class="home-template">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site" id="site">
+    <header id="site-header" class="site-header">
+      <span class="site-header__bg"></span>
+      <div class="site-header__container container">
+        <button class="site-header__hamburger" data-site-action-trigger="navigation"
+                aria-label="Open Menu" aria-expanded="false"
+                aria-controls="site-actions-navigation">
+          <span></span>
+        </button>
+        <a href="../../" rel="home" class="site-header__logo">
+          <img class="site-header__logo-image" src="../../assets/kutukdev/images/logo.png"
+               alt="DevToolkit Hub" width="128" height="128">
+          <span class="site-header__logo-text">DevToolkit Hub</span>
+        </a>
+      </div>
+      <div class="site-actions">
+        <span class="site-actions__backdrop" data-close-site-actions></span>
+        <span class="site-actions__bg"></span>
+        <div class="site-actions__container container">
+          <div id="site-actions-navigation" class="site-actions__navigation">
+            <nav class="nav-secondary">
+              <ul class="nav-secondary__menu">
+<li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/azure-devops/">
+          <span class="nav-secondary__menu-title">Azure DevOps</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github/">
+          <span class="nav-secondary__menu-title">GitHub</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-actions/">
+          <span class="nav-secondary__menu-title">GitHub Actions</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-advanced-security/">
+          <span class="nav-secondary__menu-title">GitHub Advanced Security</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-copilot/">
+          <span class="nav-secondary__menu-title">GitHub Copilot</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/github-enterprise/">
+          <span class="nav-secondary__menu-title">GitHub Enterprise</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/microsoft-git/">
+          <span class="nav-secondary__menu-title">Microsoft Git</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/nuget/">
+          <span class="nav-secondary__menu-title">NuGet</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/powershell/">
+          <span class="nav-secondary__menu-title">PowerShell</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/windows-sdk/">
+          <span class="nav-secondary__menu-title">Windows SDK</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../category/windows-terminal/">
+          <span class="nav-secondary__menu-title">Windows Terminal</span>
+        </a>
+      </li>
+      <li class="nav-secondary__menu-item">
+        <a class="nav-secondary__menu-link capital" href="../../hubs/">
+          <span class="nav-secondary__menu-title">All Hubs</span>
+        </a>
+      </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+<center>
+<script>
+  atOptions = {
+    'key' : 'a69e62c73b1ebe4abb7eed658870a8b6',
+    'format' : 'iframe',
+    'height' : 60,
+    'width' : 468,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/a69e62c73b1ebe4abb7eed658870a8b6"></script>
+</center>
+      <header class="article-header section" data-section="first">
+        <div class="article-header__content">
+          <h1 class="article-header__title">PowerShell Scripts and Functions: Complete Guide</h1>
+          <p class="article-header__excerpt">PowerShell Scripts and Functions: Complete Guide — every guide in the PowerShell hub #5, organized from fundamentals to advanced practice. Part of our PowerShell coverage on DevToolkit Hub.</p>
+        </div>
+      </header>
+      <section class="section" data-section="first">
+        <div class="container">
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for new projects</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to scripts and functions for new projects constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to scripts and functions for existing projects constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to scripts and functions for large teams constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for small teams</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to scripts and functions for small teams constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for Windows developers</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to scripts and functions for Windows developers constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to scripts and functions for CI/CD pipelines constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-scripts-and-functions-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20how%20to%20scripts%20and%20functions%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to scripts and functions for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-scripts-and-functions-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to scripts and functions for security reviews</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to scripts and functions for security reviews, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for existing projects</h2>
+                <p class="post-card__excerpt">PowerShell: How to Configure scripts and functions for existing projects is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell without</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Configure scripts and functions for large teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          </div>
+<center class="ad-300">
+<script>
+  atOptions = {
+    'key' : '5d21d6998db677a26d7522ee3d48c165',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://bauval.org/22/5d21d6998db677a26d7522ee3d48c165"></script>
+</center>
+          <div class="posts-feed" data-layout-grid="columns">
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Configure scripts and functions for small teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for enterprise environments</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Configure scripts and functions for enterprise environments constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Configure scripts and functions for CI/CD pipelines constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Configure scripts and functions for production deployments, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20configure%20scripts%20and%20functions%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Configure scripts and functions for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-configure-scripts-and-functions-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Configure scripts and functions for security reviews</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Configure scripts and functions for security reviews, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20troubleshoot%20scripts%20and%20functions%20when%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Troubleshoot scripts and functions When new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Troubleshoot scripts and functions When new projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Troubleshoot scripts and functions When new projects, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20troubleshoot%20scripts%20and%20functions%20when%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Troubleshoot scripts and functions When existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Troubleshoot scripts and functions When existing projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Troubleshoot scripts and functions When existing projects, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20troubleshoot%20scripts%20and%20functions%20when%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Troubleshoot scripts and functions When small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Troubleshoot scripts and functions When small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Troubleshoot scripts and functions When small teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20troubleshoot%20scripts%20and%20functions%20when%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Troubleshoot scripts and functions When Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Troubleshoot scripts and functions When Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Troubleshoot scripts and functions When Windows developers, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20troubleshoot%20scripts%20and%20functions%20when%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Troubleshoot scripts and functions When CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Troubleshoot scripts and functions When CI/CD pipelines</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Troubleshoot scripts and functions When CI/CD pipelines, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20troubleshoot%20scripts%20and%20functions%20when%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Troubleshoot scripts and functions When production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-troubleshoot-scripts-and-functions-when-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Troubleshoot scripts and functions When production deployments</h2>
+                <p class="post-card__excerpt">PowerShell: How to Troubleshoot scripts and functions When production deployments is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell in</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20best%20practices%20for%20scripts%20and%20functions%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Best Practices for scripts and functions in existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Best Practices for scripts and functions in existing projects</h2>
+                <p class="post-card__excerpt">PowerShell: Best Practices for scripts and functions in existing projects is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell without</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20best%20practices%20for%20scripts%20and%20functions%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Best Practices for scripts and functions in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Best Practices for scripts and functions in small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Best Practices for scripts and functions in small teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20best%20practices%20for%20scripts%20and%20functions%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Best Practices for scripts and functions in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Best Practices for scripts and functions in enterprise environments</h2>
+                <p class="post-card__excerpt">PowerShell: Best Practices for scripts and functions in enterprise environments is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell with</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20best%20practices%20for%20scripts%20and%20functions%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Best Practices for scripts and functions in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Best Practices for scripts and functions in cross-platform development</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow consistently across Windows, macOS and Linux machines, PowerShell: Best Practices for scripts and functions in cross-platform development deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20best%20practices%20for%20scripts%20and%20functions%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Best Practices for scripts and functions in production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Best Practices for scripts and functions in production deployments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow in production-critical environments where mistakes page humans, PowerShell: Best Practices for scripts and functions in production deployments deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20best%20practices%20for%20scripts%20and%20functions%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Best Practices for scripts and functions in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-best-practices-for-scripts-and-functions-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Best Practices for scripts and functions in security reviews</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow under formal security review, where every decision needs evidence, PowerShell: Best Practices for scripts and functions in security reviews deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in new projects</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow starting from an empty repository, before any habits harden, PowerShell: Common scripts and functions Mistakes in new projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in existing projects</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow without disrupting in-flight work or breaking active branches, PowerShell: Common scripts and functions Mistakes in existing projects deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Common scripts and functions Mistakes in large teams, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Common scripts and functions Mistakes in small teams, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in enterprise environments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Common scripts and functions Mistakes in enterprise environments, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Common scripts and functions Mistakes in Windows developers, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in cross-platform development</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Common scripts and functions Mistakes in cross-platform development constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in CI/CD pipelines</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Common scripts and functions Mistakes in CI/CD pipelines, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in production deployments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow in production-critical environments where mistakes page humans, PowerShell: Common scripts and functions Mistakes in production deployments deserves a deliberate procedure rather than</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20common%20scripts%20and%20functions%20mistakes%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Common scripts and functions Mistakes in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-common-scripts-and-functions-mistakes-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Common scripts and functions Mistakes in security reviews</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Common scripts and functions Mistakes in security reviews constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:00:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Scripts and Functions Examples for large teams constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell work</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for small teams</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Scripts and Functions Examples for small teams constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell work</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for enterprise environments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow with governance, compliance and change-control in the loop, PowerShell: Scripts and Functions Examples for enterprise environments deserves a deliberate procedure rather than</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for cross-platform development</h2>
+                <p class="post-card__excerpt">PowerShell: Scripts and Functions Examples for cross-platform development is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell consistently across Windows,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow inside automated pipelines where nobody can fix things interactively, PowerShell: Scripts and Functions Examples for CI/CD pipelines deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for production deployments</h2>
+                <p class="post-card__excerpt">PowerShell: Scripts and Functions Examples for production deployments is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell in production-critical environments</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-examples-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20examples%20of%20scripts%20and%20functions%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Examples for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-examples-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Examples for security reviews</h2>
+                <p class="post-card__excerpt">PowerShell: Scripts and Functions Examples for security reviews is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell under formal security</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for existing projects</h2>
+                <p class="post-card__excerpt">PowerShell: How to Automate scripts and functions for existing projects is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell without</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for small teams</h2>
+                <p class="post-card__excerpt">PowerShell: How to Automate scripts and functions for small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell with</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for enterprise environments</h2>
+                <p class="post-card__excerpt">PowerShell: How to Automate scripts and functions for enterprise environments is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell with</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for Windows developers</h2>
+                <p class="post-card__excerpt">PowerShell: How to Automate scripts and functions for Windows developers is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell on</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for cross-platform development</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow consistently across Windows, macOS and Linux machines, PowerShell: How to Automate scripts and functions for cross-platform development deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for production deployments</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Automate scripts and functions for production deployments constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20automate%20scripts%20and%20functions%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Automate scripts and functions for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-automate-scripts-and-functions-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Automate scripts and functions for security reviews</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow under formal security review, where every decision needs evidence, PowerShell: How to Automate scripts and functions for security reviews deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in new projects</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow starting from an empty repository, before any habits harden, PowerShell: How to Secure scripts and functions in new projects deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Secure scripts and functions in large teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Secure scripts and functions in small teams, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in enterprise environments</h2>
+                <p class="post-card__excerpt">PowerShell: How to Secure scripts and functions in enterprise environments is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell with</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Secure scripts and functions in Windows developers, and this guide walks it end to end. Because the work sits inside</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in cross-platform development</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow consistently across Windows, macOS and Linux machines, PowerShell: How to Secure scripts and functions in cross-platform development deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20secure%20scripts%20and%20functions%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Secure scripts and functions in security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-secure-scripts-and-functions-in-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Secure scripts and functions in security reviews</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow under formal security review, where every decision needs evidence, PowerShell: How to Secure scripts and functions in security reviews deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-optimize-scripts-and-functions-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20optimize%20scripts%20and%20functions%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Optimize scripts and functions for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-optimize-scripts-and-functions-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Optimize scripts and functions for existing projects</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow without disrupting in-flight work or breaking active branches, PowerShell: How to Optimize scripts and functions for existing projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-optimize-scripts-and-functions-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20optimize%20scripts%20and%20functions%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Optimize scripts and functions for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-optimize-scripts-and-functions-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Optimize scripts and functions for production deployments</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Optimize scripts and functions for production deployments constantly, and the honest answer is that it depends less on talent and more on process. When</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for new projects</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow starting from an empty repository, before any habits harden, PowerShell: Scripts and Functions Options Compared for new projects deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Scripts and Functions Options Compared for existing projects constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for large teams</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow across dozens of contributors with different backgrounds and access levels, PowerShell: Scripts and Functions Options Compared for large teams deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for small teams</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow with minimum overhead, because nobody owns the build full-time, PowerShell: Scripts and Functions Options Compared for small teams deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for enterprise environments</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Scripts and Functions Options Compared for enterprise environments constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for Windows developers</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow on Windows workstations and Windows-based build agents, PowerShell: Scripts and Functions Options Compared for Windows developers deserves a deliberate procedure rather than</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for cross-platform development</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Scripts and Functions Options Compared for cross-platform development, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Scripts and Functions Options Compared for CI/CD pipelines constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Scripts and Functions Options Compared for production deployments, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20compare%20scripts%20and%20functions%20options%20for%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Options Compared for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-options-compared-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Options Compared for security reviews</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow under formal security review, where every decision needs evidence, PowerShell: Scripts and Functions Options Compared for security reviews deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:15:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-migrate-scripts-and-functions-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20migrate%20scripts%20and%20functions%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Migrate scripts and functions for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-migrate-scripts-and-functions-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Migrate scripts and functions for large teams</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow across dozens of contributors with different backgrounds and access levels, PowerShell: How to Migrate scripts and functions for large teams deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-monitor-scripts-and-functions-during-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20monitor%20scripts%20and%20functions%20during%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Monitor scripts and functions During Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-monitor-scripts-and-functions-during-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Monitor scripts and functions During Windows developers</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow on Windows workstations and Windows-based build agents, PowerShell: How to Monitor scripts and functions During Windows developers deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-permissions-for-scripts-and-functions-in-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20permissions%20for%20scripts%20and%20functions%20in%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Permissions for scripts and functions in small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-permissions-for-scripts-and-functions-in-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Permissions for scripts and functions in small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Permissions for scripts and functions in small teams, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-permissions-for-scripts-and-functions-in-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20permissions%20for%20scripts%20and%20functions%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Permissions for scripts and functions in Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-permissions-for-scripts-and-functions-in-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Permissions for scripts and functions in Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Permissions for scripts and functions in Windows developers, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-permissions-for-scripts-and-functions-in-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20permissions%20for%20scripts%20and%20functions%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Permissions for scripts and functions in production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-permissions-for-scripts-and-functions-in-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Permissions for scripts and functions in production deployments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Permissions for scripts and functions in production deployments, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-checklist-before-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20checklist%20for%20scripts%20and%20functions%20before%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Checklist Before existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-checklist-before-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Checklist Before existing projects</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Scripts and Functions Checklist Before existing projects, and this guide walks it end to end. Because the work sits inside PowerShell, everything</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-checklist-before-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20checklist%20for%20scripts%20and%20functions%20before%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Checklist Before small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-checklist-before-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Checklist Before small teams</h2>
+                <p class="post-card__excerpt">PowerShell: Scripts and Functions Checklist Before small teams is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell with minimum overhead,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-checklist-before-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20checklist%20for%20scripts%20and%20functions%20before%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Checklist Before security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-checklist-before-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Checklist Before security reviews</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Scripts and Functions Checklist Before security reviews constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell work</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During new projects</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Fix scripts and functions Errors During new projects constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During existing projects</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Fix scripts and functions Errors During existing projects constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Fix scripts and functions Errors During large teams, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-small-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20small%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During small teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-small-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During small teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Fix scripts and functions Errors During small teams, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During enterprise environments</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Fix scripts and functions Errors During enterprise environments, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Fix scripts and functions Errors During Windows developers, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During cross-platform development</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Fix scripts and functions Errors During cross-platform development constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During CI/CD pipelines</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: How to Fix scripts and functions Errors During CI/CD pipelines, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During production deployments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow in production-critical environments where mistakes page humans, PowerShell: How to Fix scripts and functions Errors During production deployments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20fix%20scripts%20and%20functions%20errors%20during%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: How to Fix scripts and functions Errors During security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-how-to-fix-scripts-and-functions-errors-during-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: How to Fix scripts and functions Errors During security reviews</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: How to Fix scripts and functions Errors During security reviews constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:30:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-a-beginners-guide-to-scripts-and-functions-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20beginner%20guide%20to%20scripts%20and%20functions%20for%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: A Beginner’s Guide to scripts and functions for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-a-beginners-guide-to-scripts-and-functions-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: A Beginner’s Guide to scripts and functions for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: A Beginner’s Guide to scripts and functions for large teams constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-a-beginners-guide-to-scripts-and-functions-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20beginner%20guide%20to%20scripts%20and%20functions%20for%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: A Beginner’s Guide to scripts and functions for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-a-beginners-guide-to-scripts-and-functions-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: A Beginner’s Guide to scripts and functions for enterprise environments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow with governance, compliance and change-control in the loop, PowerShell: A Beginner’s Guide to scripts and functions for enterprise environments deserves a deliberate</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-a-beginners-guide-to-scripts-and-functions-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20beginner%20guide%20to%20scripts%20and%20functions%20for%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: A Beginner’s Guide to scripts and functions for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-a-beginners-guide-to-scripts-and-functions-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: A Beginner’s Guide to scripts and functions for cross-platform development</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: A Beginner’s Guide to scripts and functions for cross-platform development constantly, and the honest answer is that it depends less on talent and more on process.</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-new-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20advanced%20techniques%20for%20scripts%20and%20functions%20in%20new%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Advanced scripts and functions Techniques for new projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-new-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Advanced scripts and functions Techniques for new projects</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Advanced scripts and functions Techniques for new projects constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20advanced%20techniques%20for%20scripts%20and%20functions%20in%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Advanced scripts and functions Techniques for large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Advanced scripts and functions Techniques for large teams</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Advanced scripts and functions Techniques for large teams constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20advanced%20techniques%20for%20scripts%20and%20functions%20in%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Advanced scripts and functions Techniques for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Advanced scripts and functions Techniques for Windows developers</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Advanced scripts and functions Techniques for Windows developers constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20advanced%20techniques%20for%20scripts%20and%20functions%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Advanced scripts and functions Techniques for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Advanced scripts and functions Techniques for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: Advanced scripts and functions Techniques for CI/CD pipelines constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20advanced%20techniques%20for%20scripts%20and%20functions%20in%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Advanced scripts and functions Techniques for production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Advanced scripts and functions Techniques for production deployments</h2>
+                <p class="post-card__excerpt">PowerShell: Advanced scripts and functions Techniques for production deployments is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell in production-critical</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20advanced%20techniques%20for%20scripts%20and%20functions%20in%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Advanced scripts and functions Techniques for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-advanced-scripts-and-functions-techniques-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Advanced scripts and functions Techniques for security reviews</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Advanced scripts and functions Techniques for security reviews, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-performance-tips-for-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20performance%20tips%20for%20scripts%20and%20functions%20in%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Performance Tips for existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-performance-tips-for-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Performance Tips for existing projects</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow without disrupting in-flight work or breaking active branches, PowerShell: Scripts and Functions Performance Tips for existing projects deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-performance-tips-for-enterprise-environments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20performance%20tips%20for%20scripts%20and%20functions%20in%20enterprise%20environments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Performance Tips for enterprise environments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-performance-tips-for-enterprise-environments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Performance Tips for enterprise environments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow with governance, compliance and change-control in the loop, PowerShell: Scripts and Functions Performance Tips for enterprise environments deserves a deliberate procedure rather</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-scripts-and-functions-performance-tips-for-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20performance%20tips%20for%20scripts%20and%20functions%20in%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Scripts and Functions Performance Tips for CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-scripts-and-functions-performance-tips-for-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Scripts and Functions Performance Tips for CI/CD pipelines</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow inside automated pipelines where nobody can fix things interactively, PowerShell: Scripts and Functions Performance Tips for CI/CD pipelines deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-a-scripts-and-functions-workflow-for-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20workflow%20for%20scripts%20and%20functions%20across%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: A Scripts and Functions Workflow for Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-a-scripts-and-functions-workflow-for-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: A Scripts and Functions Workflow for Windows developers</h2>
+                <p class="post-card__excerpt">Teams ask about PowerShell: A Scripts and Functions Workflow for Windows developers constantly, and the honest answer is that it depends less on talent and more on process. When PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-a-scripts-and-functions-workflow-for-cross-platform-development.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20workflow%20for%20scripts%20and%20functions%20across%20cross-platform%20development&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: A Scripts and Functions Workflow for cross-platform development">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-a-scripts-and-functions-workflow-for-cross-platform-development.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: A Scripts and Functions Workflow for cross-platform development</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: A Scripts and Functions Workflow for cross-platform development, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-a-scripts-and-functions-workflow-for-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20workflow%20for%20scripts%20and%20functions%20across%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: A Scripts and Functions Workflow for security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-a-scripts-and-functions-workflow-for-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: A Scripts and Functions Workflow for security reviews</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: A Scripts and Functions Workflow for security reviews, and this guide walks it end to end. Because the work sits inside PowerShell,</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-existing-projects.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20questions%20to%20ask%20about%20scripts%20and%20functions%20before%20existing%20projects&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Questions to Ask About scripts and functions Before existing projects">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-existing-projects.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Questions to Ask About scripts and functions Before existing projects</h2>
+                <p class="post-card__excerpt">PowerShell: Questions to Ask About scripts and functions Before existing projects is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-large-teams.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20questions%20to%20ask%20about%20scripts%20and%20functions%20before%20large%20teams&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Questions to Ask About scripts and functions Before large teams">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-large-teams.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Questions to Ask About scripts and functions Before large teams</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Questions to Ask About scripts and functions Before large teams, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-windows-developers.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20questions%20to%20ask%20about%20scripts%20and%20functions%20before%20Windows%20developers&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Questions to Ask About scripts and functions Before Windows developers">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-windows-developers.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Questions to Ask About scripts and functions Before Windows developers</h2>
+                <p class="post-card__excerpt">There is a reliable way to approach PowerShell: Questions to Ask About scripts and functions Before Windows developers, and this guide walks it end to end. Because the work sits</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-ci-cd-pipelines.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20questions%20to%20ask%20about%20scripts%20and%20functions%20before%20CI/CD%20pipelines&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Questions to Ask About scripts and functions Before CI/CD pipelines">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-ci-cd-pipelines.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Questions to Ask About scripts and functions Before CI/CD pipelines</h2>
+                <p class="post-card__excerpt">PowerShell: Questions to Ask About scripts and functions Before CI/CD pipelines is one of those jobs that looks small until you have to repeat it under pressure. Working with PowerShell</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-production-deployments.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20questions%20to%20ask%20about%20scripts%20and%20functions%20before%20production%20deployments&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Questions to Ask About scripts and functions Before production deployments">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-production-deployments.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Questions to Ask About scripts and functions Before production deployments</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow in production-critical environments where mistakes page humans, PowerShell: Questions to Ask About scripts and functions Before production deployments deserves a deliberate procedure</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          <article class="post-card post" data-layout="vertical" data-has-featured-image="true">
+            <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-security-reviews.html" class="post-card__media" tabindex="-1">
+              <picture class="post-card__figure">
+                <img class="post-card__image" width="16" height="9"
+                     src="https://tse1.mm.bing.net/th?q=PowerShell%20questions%20to%20ask%20about%20scripts%20and%20functions%20before%20security%20reviews&w=474&h=274&c=7" loading="lazy"
+                     alt="PowerShell: Questions to Ask About scripts and functions Before security reviews">
+              </picture>
+            </a>
+            <div class="post-card__content">
+              <a href="../../powershell/powershell-questions-to-ask-about-scripts-and-functions-before-security-reviews.html" class="post-card__content-link">
+                <h2 class="post-card__title">PowerShell: Questions to Ask About scripts and functions Before security reviews</h2>
+                <p class="post-card__excerpt">If PowerShell is part of your daily workflow under formal security review, where every decision needs evidence, PowerShell: Questions to Ask About scripts and functions Before security reviews deserves a</p>
+              </a>
+              <div class="post-card__footer">
+                <a href="../../category/powershell/" class="post-card__meta post-card__meta-tag-primary" rel="tag">PowerShell</a>
+                <time class="post-card__meta post-card__meta--date" datetime="2026-10-31T02:45:00+06:00">October 31, 2026</time>
+              </div>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="site-footer" class="site-footer" data-theme="highlight">
+      <div class="site-footer__content" data-canvas-grid="container">
+        <nav class="nav-secondary">
+          <ul class="nav-secondary__menu">
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../"><span class="nav-secondary__menu-title">Home</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/dmca.html"><span class="nav-secondary__menu-title">Dmca</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/contact.html"><span class="nav-secondary__menu-title">Contact</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/privacy-policy.html"><span class="nav-secondary__menu-title">Privacy Policy</span></a></li>
+        <li class="nav-secondary__menu-item"><a class="nav-secondary__menu-link" href="../../page/copyright.html"><span class="nav-secondary__menu-title">Copyright</span></a></li>
+          </ul>
+        </nav>
+        <p class="site-footer__copyright">
+          &copy; 2026 DevToolkit Hub
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script defer src="../../assets/kutukdev/js/main.js"></script>
+</body>
+</html>
